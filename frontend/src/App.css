@@ -1,0 +1,130 @@
+/* Base */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f8f6;
+  color: #2f3e46;
+  overflow: hidden; /* no scrollbar on desktop */
+}
+
+/* Layout */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100vh;          /* keep within viewport */
+  padding: 18px 20px;     /* slightly tighter */
+  position: relative;
+}
+
+/* Headings */
+#title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1d3557;
+  margin: 6px 0 2px 0;
+}
+
+#instruction {
+  font-size: 1.2rem;
+  color: #2f3e46;
+  font-weight: 500;
+  margin: 0;              /* remove extra space */
+  line-height: 1;         /* keeps input close */
+}
+
+/* About box */
+.about-section {
+  position: absolute;
+  top: 320px;
+  left: 46px;
+  text-align: left;
+  max-width: 380px;       /* more room for words */
+  background: #ffffffd9;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  z-index: 2; /* above the leaf */
+}
+
+.about-section h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #1d3557;
+}
+
+.about-section ul {
+  padding-left: 18px;
+  margin: 0;
+}
+.about-section li { margin-bottom: 8px; }
+
+.about-section a {
+  color: #006d77;
+  text-decoration: none;
+  font-weight: 500;
+}
+.about-section a:hover { text-decoration: underline; }
+
+/* Upload wrapper
+   - centers the row that contains the file-details and preview
+*/
+.upload-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;      /* tiny gap between input and cards */
+  margin-top: 6px;
+}
+
+/* Contact (now clearly visible) */
+.contact-section {
+  position: absolute;
+  right: 22px;
+  background: #ffffffea;  /* white pill for contrast */
+  border-radius: 12px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  z-index: 3;   /* above everything */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-label {
+  font-size: 0.95rem;
+  color: #495057;
+}
+
+.contact-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+.contact-icon:hover {
+  transform: scale(1.08);
+  filter: brightness(1.15);
+}
+
+/* Responsive: allow scroll on smaller screens */
+@media (max-width: 900px) {
+  body { overflow-y: auto; }
+  .about-section {
+    position: static;
+    margin-bottom: 16px;
+    width: 90%;
+  }
+  .contact-section {
+    position: static;
+    margin-top: 18px;
+  }
+}

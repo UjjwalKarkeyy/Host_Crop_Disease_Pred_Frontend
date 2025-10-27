@@ -1,0 +1,12 @@
+/* Softer, farther to bottom-right, behind content */
+.plantImg img {
+  position: absolute;
+  bottom: -110px;
+  right: -140px;
+  opacity: 0.09;       /* lower so content reads clearly */
+  width: 820px;        /* big but out of the way */
+  height: auto;
+  transform: rotate(-6deg);
+  z-index: 0;          /* background */
+  pointer-events: none;
+}

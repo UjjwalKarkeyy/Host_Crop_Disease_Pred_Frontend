@@ -1,0 +1,114 @@
+/* Keep input close to subtitle */
+.input-group {
+  margin-top: 90px;
+}
+
+/* file input */
+.input-group input[type="file"] {
+  padding: 10px;
+  border: 2px dashed #83c5be;
+  border-radius: 6px;
+  background-color: #edf6f9;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.input-group input[type="file"]:hover {
+  background-color: #d8f3dc;
+}
+
+/* row holding details + preview */
+.uploader-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 36px;        /* balanced spacing */
+  margin-top: 10px; /* small, so it's tight to input */
+}
+
+/* left column stacks the details card */
+.left-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* details card */
+.file-details {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px 18px 14px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  width: 300px;          /* consistent width */
+  margin-left: 375px;
+}
+
+.file-details-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2f3e46;
+  margin-bottom: 8px;
+}
+
+.file-details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;    /* space above button */
+  line-height: 1.45;
+  color: #334;
+}
+
+/* upload button sits inside the card and centers */
+button.submit {
+  display: inline-block;
+  background-color: #2a9d8f;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  transition: 0.25s;
+}
+button.submit:hover {
+  background-color: #21867a;
+  transform: translateY(-1px);
+}
+
+/* preview card — nudged slightly to the left from screen edge */
+.img-preview {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  width: 300px;
+  text-align: center;
+  position: relative;
+  left: 120px;         /* pulls a little away from the right edge */
+  top: -35px;
+}
+
+.preview h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  color: #1d3557;
+}
+
+.preview img {
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+  max-height: 220px;
+  width: auto;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .uploader-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .img-preview { left: 0; width: 92%; }
+  .file-details { width: 92%; }
+}
