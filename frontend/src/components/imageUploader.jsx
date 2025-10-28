@@ -18,7 +18,7 @@ const ImageUploader = () => {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://13.62.98.66/", {
+      const response = await fetch("https://13.62.98.66/", {
         method: "POST",
         body: formData,
       });
