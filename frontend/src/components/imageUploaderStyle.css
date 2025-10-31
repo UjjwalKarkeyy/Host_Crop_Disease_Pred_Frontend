@@ -112,3 +112,9 @@ button.submit:hover {
   .img-preview { left: 0; width: 92%; }
   .file-details { width: 92%; }
 }
+
+.result{
+  position: fixed;
+  top: -50px;
+  right: -20px;
+}

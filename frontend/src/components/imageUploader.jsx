@@ -68,8 +68,7 @@ const ImageUploader = () => {
             </div>
           )}
         </div>
-
-        <div>
+        <div className="result">
           {predictions.length > 0 && (
             <div>
               <h3>Predictions:</h3>
