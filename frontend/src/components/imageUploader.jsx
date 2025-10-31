@@ -3,6 +3,7 @@ import "./imageUploaderStyle.css";
 
 const ImageUploader = () => {
   const [file, setFile] = useState(null);
+  const [predictions, setPredictions] = useState([]);
 
   const handleFileChange = (e) => {
     if (e.target.files) {
@@ -24,7 +25,7 @@ const ImageUploader = () => {
       });
 
       const data = await response.json();
-      console.log(data);
+      setPredictions(data.predictions)
     } catch (error) {
       console.log("Upload failed:", error);
     }
@@ -64,6 +65,19 @@ const ImageUploader = () => {
             <div className="preview">
               <h2>Preview of Image</h2>
               <img src={URL.createObjectURL(file)} alt="preview" height={200} />
+            </div>
+          )}
+        </div>
+
+        <div>
+          {predictions.length > 0 && (
+            <div>
+              <h3>Predictions:</h3>
+              {predictions.map((p, i) => (
+                <p key={i}>
+                  {p.label}: {(p.confidence * 100).toFixed(2)}%
+                </p>
+              ))}
             </div>
           )}
         </div>
