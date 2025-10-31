@@ -18,7 +18,7 @@ const ImageUploader = () => {
     formData.append("file", file);
 
     try {
-      const response = await fetch("https://croplysismain.karkiujjwal.com.np/", {
+      const response = await fetch("https://croplysismain.karkiujjwal.com.np/predict", {
         method: "POST",
         body: formData,
       });
