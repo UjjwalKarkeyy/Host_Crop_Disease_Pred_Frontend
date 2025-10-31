@@ -18,7 +18,7 @@ const ImageUploader = () => {
     formData.append("file", file);
 
     try {
-      const response = await fetch("https://13.62.98.66/", {
+      const response = await fetch("https://croplysismain.karkiujjwal.com.np/", {
         method: "POST",
         body: formData,
       });
