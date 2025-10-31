@@ -115,6 +115,6 @@ button.submit:hover {
 
 .result{
   position: fixed;
-  top: -50px;
-  right: -20px;
+  top: 480px;
+  right: 620px;
 }
